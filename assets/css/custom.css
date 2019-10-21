@@ -68,10 +68,6 @@ select {
   border-right: 5px solid #f5f5f5; }
 .col-recommend .row {
   background-color: #fff; }
-.col-recommend .text-success {
-  padding-left: 10px;
-  border-left: 7px solid #7db538;
-  line-height: 1; }
 @media (max-width: 1199.98px) {
   .col-recommend {
     border: none; } }
@@ -235,7 +231,7 @@ select {
   .table-record tr {
     margin: 0 0 1rem 0; }
   .table-record tbody tr {
-    border: 2px solid #dee2e6; }
+    border: 2px solid #d8d8d8; }
   .table-record td {
     position: relative;
     border: none;
@@ -300,12 +296,12 @@ select {
 
 .text-or {
   position: relative;
-  color: #dee2e6; }
+  color: #d8d8d8; }
 .text-or:before, .text-or:after {
   position: absolute;
   left: 50%;
   content: '';
-  border-left: 1px solid #dee2e6;
+  border-left: 1px solid #d8d8d8;
   height: 43px; }
 .text-or:before {
   top: -43px; }
@@ -314,6 +310,14 @@ select {
 
 .text-sm {
   font-size: 0.93rem; }
+
+.title-success {
+  padding-left: 10px;
+  border-left: 7px solid #7db538;
+  line-height: 1;
+  color: #7db538; }
+.title-success .h2 {
+  font-weight: normal; }
 
 @media (max-width: 1199.98px) {
   .lead {
@@ -335,7 +339,7 @@ select {
 
 .nav-tabs .nav-link {
   border: 0;
-  border-bottom: 4px solid #dee2e6;
+  border-bottom: 4px solid #d8d8d8;
   color: #455461; }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link.active {
   border-bottom-color: #0096e6;
@@ -374,6 +378,9 @@ select {
 .btn-facebook:hover, .btn-facebook:active {
   background-color: #344e86;
   color: #fff; }
+
+.btn-secondary {
+  color: #fff !important; }
 
 [class^="icon-"], [class*="icon-"] {
   position: relative;
