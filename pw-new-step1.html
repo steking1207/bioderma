@@ -209,7 +209,7 @@
                             <a class="ml-2" href="">更新驗證碼</a>
                         </div>
                         <div class="form-group">
-                            <a class="btn btn-block btn-primary" href="pw-new-step2.html">下一步</a>
+                            <a class="btn btn-block btn-primary" href="javascript:void();" data-toggle="modal" data-target="#modalAlert">下一步</a>
                         </div>
                     </form>
 
@@ -222,6 +222,28 @@
     <!-- module: common-footer -->
     <div id="common-footer"></div>
     <!-- module: ./common-footer -->
+
+    <div class="modal fade" id="modalSuccess" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content py-10">
+                <div class="modal-header text-center">
+                    <div class="modal-circle">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="h3 text-ci-dark w-100">
+                        紅利商品兌換成功
+                    </div>
+                </div>
+                <div class="modal-body text-center">
+                    <p>
+                        您的紅利商品已經成功兌換了<br>
+                        您可以至會員中心<a href="member-change-record.html"><u>【兌換紀錄】</u></a>中查詢
+                    </p>
+                    <a class="btn btn-primary px-20" href="javascript:void();" data-dismiss="modal">好</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- global -->
     <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
