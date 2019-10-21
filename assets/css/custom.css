@@ -72,43 +72,6 @@ select {
   .col-recommend {
     border: none; } }
 
-#header {
-  z-index: 10;
-  background-color: #fff; }
-#header .container {
-  padding-top: 40px;
-  padding-bottom: 30px; }
-#header .row {
-  align-items: flex-start; }
-#header .logo {
-  margin-bottom: 30px; }
-#header .logo .square {
-  display: none; }
-@media (min-width: 992px) {
-  #header.active .container {
-    padding-top: 20px;
-    padding-bottom: 20px; }
-  #header.active .row {
-    align-items: center; }
-  #header.active .logo {
-    margin-bottom: 0; }
-  #header.active .logo .full {
-    display: none; }
-  #header.active .logo .square {
-    display: block; } }
-@media (max-width: 1199.98px) {
-  #header .container {
-    padding-top: 20px;
-    padding-bottom: 20px; }
-  #header .row {
-    align-items: center; }
-  #header .logo {
-    margin: 0; } }
-
-#footer {
-  background-color: #536782;
-  color: #fff; }
-
 .slider-kv {
   margin: 0 !important; }
 .slider-kv:before {
@@ -121,6 +84,47 @@ select {
   height: 70%;
   background: #536782;
   content: ''; }
+@media (max-width: 1199.98px) {
+  .slider-kv:before {
+    width: 2%;
+    left: -2%; } }
+
+#header {
+  z-index: 10;
+  background-color: #fff; }
+#header .container {
+  padding-top: 40px;
+  padding-bottom: 30px; }
+#header .row {
+  align-items: flex-start; }
+#header .logo {
+  margin-bottom: 30px; }
+#header .logo .square {
+  display: none; }
+@media (min-width: 1024px) {
+  #header.active .container {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  #header.active .row {
+    align-items: center; }
+  #header.active .logo {
+    margin-bottom: 0; }
+  #header.active .logo .full {
+    display: none; }
+  #header.active .logo .square {
+    display: block; } }
+@media (max-width: 1023.98px) {
+  #header .container {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  #header .row {
+    align-items: center; }
+  #header .logo {
+    margin: 0; } }
+
+#footer {
+  background-color: #536782;
+  color: #fff; }
 
 .modal-circle {
   position: absolute;
@@ -329,13 +333,16 @@ select {
 #header #main-nav {
   font-size: 1.2rem; }
 #header #main-nav .nav .nav-link {
-  padding: 0 3rem; }
+  padding: 0 2rem; }
 #header #main-nav .nav:first-child .nav-link {
   padding-left: 0; }
 #header.active #main-nav {
-  margin-left: 2rem; }
+  font-size: 1rem;
+  margin-left: 1rem; }
 #header.active #main-nav .nav .nav-link {
-  padding: 0 1rem; }
+  padding: 0 .5rem; }
+#header .top-nav {
+  font-size: 0.93rem; }
 
 .nav-tabs .nav-link {
   border: 0;
@@ -493,7 +500,7 @@ i.h1, i.h2, i.h3, i.h4, i.h5, i.h6 {
 .breadcrumb .breadcrumb-item a {
   color: #3f3e42; }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .col-lg-15 {
     flex: 0 0 20%;
     max-width: 20%; } }
@@ -774,35 +781,65 @@ i.h1, i.h2, i.h3, i.h4, i.h5, i.h6 {
 
 .slick-dots {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 30px;
   list-style: none;
   display: block;
   text-align: center;
   padding: 0;
   margin: 0; }
+@media (min-width: 1024px) {
+  .slick-dots {
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 30px; }
+  .slick-dots li {
+    display: block;
+    margin: 8px 0; }
+  .slick-dots li button:hover, .slick-dots li button:focus {
+    margin: -1px 0; }
+  .slick-dots li.slick-active button {
+    margin: -1px 0; } }
+@media (max-width: 1023.98px) {
+  .slick-dots {
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto; }
+  .slick-dots li {
+    margin: 0 4px;
+    display: inline-block; }
+  .slick-dots li button:hover, .slick-dots li button:focus {
+    margin: 0 -1px; }
+  .slick-dots li.slick-active button {
+    margin: 0 -1px; } }
 .slick-dots li {
   position: relative;
-  display: block;
-  margin: 8px 0;
   padding: 0;
   cursor: pointer; }
 .slick-dots li button {
   background-color: #81a6cb;
   display: block;
-  width: 10px;
-  height: 10px;
+  margin: 1px;
+  padding: 5px;
+  width: 12px;
+  height: 12px;
   outline: none;
   line-height: 0px;
   font-size: 0px;
   color: transparent;
-  padding: 5px;
   cursor: pointer;
   border-radius: 50%;
-  border: 2px solid #81a6cb; }
+  border: 0; }
 .slick-dots li button:hover, .slick-dots li button:focus {
   outline: none;
-  background-color: #fff; }
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border: 2px solid #81a6cb; }
 .slick-dots li.slick-active button {
-  background-color: #fff; }
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border: 2px solid #81a6cb; }
