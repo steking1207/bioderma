@@ -125,6 +125,8 @@ select {
 #footer {
   background-color: #536782;
   color: #fff; }
+#footer a:hover, #footer a:focus {
+  text-decoration: underline; }
 
 .modal-circle {
   position: absolute;
@@ -362,6 +364,32 @@ select {
     padding-left: 0;
     padding-right: 0; } }
 
+.nav-social .nav-item {
+  margin: 0 7px; }
+.nav-social .nav-item:last-child {
+  margin-right: 0; }
+.nav-social .nav-link {
+  padding: 0;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  border-radius: 50%; }
+.nav-social .nav-link i {
+  line-height: 55px; }
+.nav-social .nav-link:hover, .nav-social .nav-link:focus {
+  background: #3c5270; }
+@media (max-width: 1199.98px) {
+  .nav-social .nav-item:last-child {
+    margin-right: 7px; } }
+
+.custom-select {
+  -moz-appearance: window;
+  -webkit-appearance: none; }
+
+.is-invalid {
+  background: #fff0f0 !important;
+  border-color: #efe3e5 !important; }
+
 .btn-regist {
   position: relative;
   display: block;
@@ -388,6 +416,9 @@ select {
 
 .btn-secondary {
   color: #fff !important; }
+
+.btn-outline-primary {
+  background: #fff; }
 
 [class^="icon-"], [class*="icon-"] {
   position: relative;
