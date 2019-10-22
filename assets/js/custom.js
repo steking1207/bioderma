@@ -1,38 +1,12 @@
 $(function(){
 //    $('.anchor').click(function(){
 //		$('html, body').animate({
-//        scrollTop: $( $.attr(this, 'href') ).offset().top - 120}, 750);
+//        scrollTop: $( $.attr(this, 'href') ).offset().top - 80}, 750);
 //		return false;
 //	});
-//    $('#customFile').on('change',function(){
-//        var fileName = $(this).val();
-//        $(this).next('.custom-file-label').html(fileName);
-//    });
-
-//    $(window).on("scroll", function() {
-//        if($(window).scrollTop() > 100) {
-//            $("#header").addClass("active");
-//        } else {
-//            //remove the background property so it comes transparent again (defined in your css)
-//           $("#header").removeClass("active");
-//        }
-//    });
-
-
-
-
-//    var header = $("#header");
-//    $(window).scroll(function() {
-//        var scroll = $(window).scrollTop();
-//
-//        if (scroll >= 150) {
-//            header.addClass("active");
-//        } else {
-//            header.removeClass("active");
-//        }
-//    });
-
+    // grab target from URL hash (i.e. www.mysite.com/page-a.html#target-name)
 });
+
 
 jQuery(document).ready(function($) {
 
@@ -92,4 +66,34 @@ jQuery(document).ready(function($) {
         // instead of a settings object
       ]
     });
+
+//    var hash= window.location.hash
+//if ( hash == '' || hash == '#' || hash == undefined ) return false;
+//      var target = $(hash);
+//      headerHeight = 120;
+//      target = target.length ? target : $('[name=' + hash.slice(1) +']');
+//      if (target.length) {
+//        $('html,body').stop().animate({
+//          scrollTop: target.offset().top - 125 //offsets for fixed header
+//        }, 'linear');
+//      }
+});
+
+jQuery(document).ready(function(){
+// run on DOM ready
+// grab target from URL hash (i.e. www.example.com/page-a.html#target-name)
+
+var target = window.location.hash;
+
+// only try to scroll to offset if target has been set in location hash
+
+if ( target != '' ){
+    var $target = jQuery(target);
+    jQuery('html, body').stop().animate({
+    'scrollTop': $target.offset().top + 240}, // set offset value here i.e. 50
+    500,
+    'swing',function () {
+    window.location.hash = target + 240 ;
+    });
+}
 });
