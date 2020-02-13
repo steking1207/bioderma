@@ -558,11 +558,11 @@ i.h1, i.h2, i.h3, i.h4, i.h5, i.h6 {
   font-family: "Font Awesome\ 5 Free";
   font-weight: 900; }
 [data-toggle="collapse"][aria-expanded="true"]:after {
-  content: ""; }
+  content: ""; }
 [data-toggle="collapse"][aria-expanded="false"]:after {
-  content: ""; }
+  content: ""; }
 [data-toggle="collapse"]:after {
-  content: ""; }
+  content: ""; }
 
 /*! Pushy - v1.3.0 - 2019-6-25
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
